@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GreenIQ — Premium Landing Screen
+     Full-screen 3D highway wallpaper with floating glassmorphism overlays -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <!-- ═══ LAYER 0: Full-Screen OpenGL 3D National Highway ═══ -->
+    <android.opengl.GLSurfaceView
+        android:id="@+id/glSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- ═══ LAYER 1: Top gradient fade ═══ -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="top"
+        android:background="@drawable/gradient_fade_top" />
+
+    <!-- ═══ LAYER 2: Bottom gradient fade ═══ -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_fade_bottom" />
+
+    <!-- ═══ LAYER 3: Scrollable Content Overlay ═══ -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ═══ TOP STATUS BAR ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp">
+
+                <View
+                    android:id="@+id/liveDot"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/bg_live_dot" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIVE · 3D NATIONAL HIGHWAYS"
+                    android:textColor="@color/text_muted"
+                    android:textSize="9sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"
+                    android:layout_marginStart="6dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvFps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="60 FPS"
+                    android:textColor="@color/health_green"
+                    android:textSize="9sp"
+                    android:fontFamily="monospace"
+                    android:alpha="0.5" />
+
+            </LinearLayout>
+
+            <!-- ═══ HERO SPACER (Let the 3D highway breathe) ═══ -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+            <!-- ═══ HERO CONTENT ═══ -->
+            <LinearLayout
+                android:id="@+id/heroContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingHorizontal="28dp"
+                android:paddingBottom="24dp">
+
+                <!-- Tag Chip -->
+                <TextView
+                    android:id="@+id/heroTag"
+                    style="@style/GreenIQ.Chip.Tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌿  GREENIQ INTELLIGENCE"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/heroTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Living\nHighway"
+                    android:textColor="@color/text_primary"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingMultiplier="1.0"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Subtitle -->
+                <TextView
+                    android:id="@+id/heroSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="India's 1,46,000 km highway network — visualized, diagnosed, and healed by AI."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:maxWidth="340dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- CTA Buttons Row -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnLaunch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="52dp"
+                        android:text="Launch Platform"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_button_gradient"
+                        android:paddingHorizontal="28dp"
+                        android:layout_marginEnd="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDemo"
+                        style="@style/GreenIQ.Button.Secondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="52dp"
+                        android:text="Run Demo ▶"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ═══ STATE CONTROLS (Neutral / Disease / GREENIQ) ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingHorizontal="28dp"
+                android:paddingBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnNeutral"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Neutral"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/accent_cyan"
+                    android:background="@drawable/bg_state_btn"
+                    android:layout_marginEnd="6dp" />
+
+                <Button
+                    android:id="@+id/btnDisease"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Disease"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/sick_red"
+                    android:background="@drawable/bg_state_btn"
+                    android:layout_marginHorizontal="3dp" />
+
+                <Button
+                    android:id="@+id/btnHeal"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="GREENIQ ✦"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/health_green"
+                    android:background="@drawable/bg_state_btn"
+                    android:layout_marginStart="6dp" />
+
+            </LinearLayout>
+
+            <!-- ═══ LIVE WASTE COUNTER ═══ -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/wasteCounterCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#1AFF2D20"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="#33FF2D20"
+                app:strokeWidth="1dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🚨 INDIA'S LOGISTICS WASTE — LIVE"
+                        android:textColor="#B3FF2D20"
+                        android:textSize="9sp"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.08"
+                        android:layout_marginBottom="6dp" />
+
+                    <TextView
+                        android:id="@+id/liveWasteValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0"
+                        android:textColor="@color/sick_red"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="wasted since you opened this app (₹4,850/sec)"
+                        android:textColor="#80FF2D20"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ═══ CRISIS STATS ═══ -->
+            <LinearLayout
+                android:id="@+id/statsSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/GreenIQ.Chip.Tag"
+                    android:text="⚠️  The Crisis"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/statsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false" />
+
+            </LinearLayout>
+
+            <!-- ═══ QUICK ACTIONS GRID ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/GreenIQ.Text.Label"
+                    android:text="QUICK ACTIONS"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <!-- Carbon Calculator -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardCarbon"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="#1A07D8F6"
+                        app:strokeColor="#3307D8F6">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="⚡"
+                                android:textSize="24sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Carbon\nCalc"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="GLEC v3"
+                                android:textColor="@color/accent_cyan"
+                                android:textSize="9sp"
+                                android:fontFamily="monospace"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Route Optimizer -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardRoutes"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="3dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="#1AE5417A"
+                        app:strokeColor="#33E5417A">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🛣️"
+                                android:textSize="24sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Route\nOptimizer"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="OR-Tools"
+                                android:textColor="@color/accent_pink"
+                                android:textSize="9sp"
+                                android:fontFamily="monospace"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- AI Advisor -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardAdvisor"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="#1A10B981"
+                        app:strokeColor="#3310B981">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🤖"
+                                android:textSize="24sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HARIT\nAdvisor"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="6dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gemini"
+                                android:textColor="@color/accent_green"
+                                android:textSize="9sp"
+                                android:fontFamily="monospace"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ═══ ALL 9 MODULES GRID ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/GreenIQ.Text.Label"
+                    android:text="9 PROBLEM STATEMENTS"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Row 1: PS1 PS2 PS3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPs1"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎯" android:textSize="20sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Carrier\nSelection" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="XGBoost" android:textColor="@color/accent_cyan" android:textSize="8sp" android:fontFamily="monospace" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPs2"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📄" android:textSize="20sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Doc\nIntelligence" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gemini" android:textColor="@color/accent_cyan" android:textSize="8sp" android:fontFamily="monospace" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPs3"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🤝" android:textSize="20sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Negotiation\nAgent" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ANAC" android:textColor="@color/accent_cyan" android:textSize="8sp" android:fontFamily="monospace" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <!-- Row 2: PS4 PS5 PS6 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPs4"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛣️" android:textSize="20sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Route\nOptimizer" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OR-Tools" android:textColor="@color/accent_cyan" android:textSize="8sp" android:fontFamily="monospace" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPs5"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📦" android:textSize="20sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Load\nConsolidation" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HDBSCAN" android:textColor="@color/accent_cyan" android:textSize="8sp" android:fontFamily="monospace" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPs6"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚡" android:textSize="20sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Carbon\nTracker" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GLEC v3" android:textColor="@color/accent_cyan" android:textSize="8sp" android:fontFamily="monospace" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <!-- Row 3: PS7 PS8 PS9 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPs7"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🤖" android:textSize="20sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HARIT AI\nAdvisor" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gemini" android:textColor="@color/accent_cyan" android:textSize="8sp" android:fontFamily="monospace" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPs8"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎨" android:textSize="20sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Corporate\nRebrand" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ESG" android:textColor="@color/accent_cyan" android:textSize="8sp" android:fontFamily="monospace" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPs9"
+                        style="@style/GreenIQ.GlassCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🧹" android:textSize="20sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lane\nIntelligence" android:textColor="@color/text_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data" android:textColor="@color/accent_cyan" android:textSize="8sp" android:fontFamily="monospace" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ═══ TECH STACK ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Powered by Enterprise Tech"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:chipSpacingHorizontal="6dp"
+                    app:chipSpacingVertical="6dp">
+
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FastAPI" app:chipBackgroundColor="@color/bg_card" app:chipStrokeColor="@color/border_subtle" app:chipStrokeWidth="1dp" android:textColor="@color/text_secondary" android:textSize="10sp" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gemini" app:chipBackgroundColor="@color/bg_card" app:chipStrokeColor="@color/border_subtle" app:chipStrokeWidth="1dp" android:textColor="@color/text_secondary" android:textSize="10sp" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OR-Tools" app:chipBackgroundColor="@color/bg_card" app:chipStrokeColor="@color/border_subtle" app:chipStrokeWidth="1dp" android:textColor="@color/text_secondary" android:textSize="10sp" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="XGBoost" app:chipBackgroundColor="@color/bg_card" app:chipStrokeColor="@color/border_subtle" app:chipStrokeWidth="1dp" android:textColor="@color/text_secondary" android:textSize="10sp" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OpenGL ES" app:chipBackgroundColor="@color/bg_card" app:chipStrokeColor="@color/border_subtle" app:chipStrokeWidth="1dp" android:textColor="@color/text_secondary" android:textSize="10sp" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HDBSCAN" app:chipBackgroundColor="@color/bg_card" app:chipStrokeColor="@color/border_subtle" app:chipStrokeWidth="1dp" android:textColor="@color/text_secondary" android:textSize="10sp" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+
+            <!-- ═══ FOOTER ═══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingVertical="20dp"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TEAM OUTLIERS · CodeVyuh 2026"
+                    android:textColor="@color/text_muted"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.08" />
+
+            </LinearLayout>
+
+            <!-- Bottom spacer for bottom nav -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

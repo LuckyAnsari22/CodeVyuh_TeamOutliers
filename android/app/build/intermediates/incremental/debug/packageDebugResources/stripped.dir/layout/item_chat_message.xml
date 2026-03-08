@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:paddingHorizontal="4dp">
+
+    <!-- User message (right-aligned) -->
+    <LinearLayout
+        android:id="@+id/userBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_button_gradient"
+        android:padding="14dp"
+        android:maxWidth="280dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tvUserMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.4" />
+    </LinearLayout>
+
+    <!-- AI response (left-aligned) -->
+    <LinearLayout
+        android:id="@+id/aiBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@drawable/bg_glass_card"
+        android:padding="14dp"
+        android:maxWidth="300dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tvAiMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.5" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/fragment_solutions.xml",
+        "source": "com.greeniq.app-main-73:/layout/fragment_solutions.xml"
+    },
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/fragment_advisor.xml",
+        "source": "com.greeniq.app-main-73:/layout/fragment_advisor.xml"
+    },
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/fragment_carbon.xml",
+        "source": "com.greeniq.app-main-73:/layout/fragment_carbon.xml"
+    },
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/activity_main.xml",
+        "source": "com.greeniq.app-main-73:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/item_solution_card.xml",
+        "source": "com.greeniq.app-main-73:/layout/item_solution_card.xml"
+    },
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/item_chat_message.xml",
+        "source": "com.greeniq.app-main-73:/layout/item_chat_message.xml"
+    },
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/fragment_home.xml",
+        "source": "com.greeniq.app-main-73:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/fragment_map.xml",
+        "source": "com.greeniq.app-main-73:/layout/fragment_map.xml"
+    },
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/fragment_iot_architecture.xml",
+        "source": "com.greeniq.app-main-73:/layout/fragment_iot_architecture.xml"
+    },
+    {
+        "merged": "com.greeniq.app-mergeDebugResources-70:/layout/item_stat_card.xml",
+        "source": "com.greeniq.app-main-73:/layout/item_stat_card.xml"
+    }
+]

@@ -1,0 +1,7 @@
+#Sun Mar 08 07:35:28 IST 2026
+base.0=D\:\\sem4\\TeamOutliers_CodeVyuh\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+base.1=D\:\\sem4\\TeamOutliers_CodeVyuh\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

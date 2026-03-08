@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/codeFragment"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="Code" />
+    <item
+        android:id="@+id/anomalyFragment"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="Anomalies" />
+    <item
+        android:id="@+id/digitalTwinFragment"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Digital Twin" />
+    <item
+        android:id="@+id/iotArchitectureFragment"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="IoT Stack" />
+</menu>

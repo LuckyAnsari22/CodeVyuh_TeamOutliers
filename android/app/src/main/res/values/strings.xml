@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GREENIQ</string>
+    <string name="tagline">India\'s Freight Carbon Intelligence</string>
+    <string name="hero_title">The Living\nHighway</string>
+    <string name="hero_subtitle">India\'s 1,46,000 km highway network — visualized, diagnosed, and healed by AI.</string>
+    <string name="hero_label">🌿 Next-Gen Logistics Intelligence</string>
+    <string name="cta_launch">Launch Platform</string>
+    <string name="cta_demo">Watch Demo</string>
+    <string name="cta_calculate">⚡ Calculate Carbon</string>
+    <string name="cta_optimize">🛣️ Optimize Routes</string>
+    <string name="cta_consolidate">📦 Consolidate Loads</string>
+    <string name="cta_advisor">💬 Ask HARIT AI</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_map">3D Map</string>
+    <string name="nav_solutions">Solutions</string>
+    <string name="nav_carbon">Carbon</string>
+    <string name="nav_advisor">AI Advisor</string>
+
+    <!-- Stats -->
+    <string name="stat_emissions">80–130 Mt</string>
+    <string name="stat_emissions_label">CO₂/year from road freight</string>
+    <string name="stat_waste">₹1.53L Cr</string>
+    <string name="stat_waste_label">Wasted annually in logistics</string>
+    <string name="stat_empty">45%</string>
+    <string name="stat_empty_label">Truck capacity runs empty</string>
+    <string name="stat_lpi">38th</string>
+    <string name="stat_lpi_label">Logistics Performance Index</string>
+
+    <!-- Carbon Calculator -->
+    <string name="carbon_title">Live Carbon Calculator</string>
+    <string name="carbon_subtitle">GLEC v3 · WTW Methodology · Real-time</string>
+    <string name="carbon_origin">Origin City</string>
+    <string name="carbon_dest">Destination City</string>
+    <string name="carbon_weight">Weight (kg)</string>
+    <string name="carbon_vehicle">Vehicle Type</string>
+    <string name="carbon_result_label">Total WTW Emissions (kg CO₂e)</string>
+    <string name="carbon_grade_label">Carbon Grade</string>
+    <string name="carbon_benchmark">vs. India Avg (0.0788)</string>
+
+    <!-- Solutions -->
+    <string name="solutions_title">Integrated Problem Solvers</string>
+    <string name="solutions_subtitle">Nine problem statements solved with cutting-edge AI, optimization algorithms, and real-time analytics.</string>
+
+    <!-- AI Advisor -->
+    <string name="advisor_title">HARIT AI Advisor</string>
+    <string name="advisor_subtitle">Gemini-powered strategic sustainability intelligence</string>
+    <string name="advisor_hint">Ask about carbon reduction, route optimization, fleet strategy…</string>
+    <string name="advisor_send">Send</string>
+
+    <!-- Route Optimization -->
+    <string name="routes_title">Route Optimization</string>
+    <string name="routes_subtitle">OR-Tools VRP solver minimizing emissions and costs</string>
+    <string name="routes_run_demo">Run Demo Optimization</string>
+
+    <!-- Load Consolidation -->
+    <string name="consol_title">Load Consolidation</string>
+    <string name="consol_subtitle">HDBSCAN 4D geospatial clustering engine</string>
+    <string name="consol_run_demo">Run Demo Consolidation</string>
+
+    <!-- 3D Map -->
+    <string name="map_title">3D Freight Network</string>
+    <string name="map_subtitle">Live India highway skeleton — tap to activate GREENIQ pulse</string>
+
+    <!-- General -->
+    <string name="loading">Loading…</string>
+    <string name="error_network">Network error. Is the backend running?</string>
+    <string name="error_generic">Something went wrong</string>
+    <string name="retry">Retry</string>
+    <string name="powered_by">Powered by Team Outliers</string>
+</resources>

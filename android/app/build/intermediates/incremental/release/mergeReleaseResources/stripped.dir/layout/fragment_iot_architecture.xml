@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            style="@style/GreenIQ.Chip.Tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="System Blueprint" />
+
+        <TextView
+            style="@style/GreenIQ.Text.SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="IoT Architecture" />
+
+        <TextView
+            style="@style/GreenIQ.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="Complete Edge-to-Cloud implementation stack powering the Carbon Digital Twin." />
+
+        <!-- ════ LAYER 1: EDGE ════ -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GreenIQ.GlassCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="#3300E5FF"> <!-- Cyan hint -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/GreenIQ.Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LAYER 1"
+                    android:textColor="#00E5FF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="EDGE LAYER — On Vehicle"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Chips container -->
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 GPS (Neo-6M)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔌 OBD-II (ELM327 BT)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📉 Accel (MPU-6050)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚖️ Axle Load Cell"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+                        
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🧠 Edge MCU (TFLite)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#1A00E5FF"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:text="Edge processing: emission calculated ON the truck, not in cloud"
+                    android:textColor="#00E5FF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════ DATA FLOW 1 ════ -->
+        <com.greeniq.app.ui.iot.AnimatedDataFlowView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- ════ LAYER 2: TRANSPORT ════ -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GreenIQ.GlassCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="#3300FF88"> <!-- Green hint -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/GreenIQ.Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LAYER 2"
+                    android:textColor="#00FF88" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="TRANSPORT LAYER"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📡 MQTT (HiveMQ Cloud)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+                        
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📁 greeniq/fleet/{...}/telemetry"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔒 TLS 1.3 Encrypted"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+                        
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💾 24h Offline GPS Buffer"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#1A00FF88"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:text="5-second telemetry cadence • offline-first with local buffer"
+                    android:textColor="#00FF88"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════ DATA FLOW 2 ════ -->
+        <com.greeniq.app.ui.iot.AnimatedDataFlowView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- ════ LAYER 3: CLOUD PROCESSING ════ -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GreenIQ.GlassCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="#33FF8C00"> <!-- Amber hint -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/GreenIQ.Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LAYER 3"
+                    android:textColor="#FF8C00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="CLOUD PROCESSING — Firebase"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚡ Realtime DB (Raw Stream)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚙️ Cloud Functions (Fusion)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🗄️ Firestore (Carbon Records)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📊 BigQuery (ML Data)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+                        
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🤖 Vertex AI (XGBoost)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#1AFF8C00"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:text="Carbon Digital Twin updated every 5 seconds per truck"
+                    android:textColor="#FF8C00"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════ DATA FLOW 3 ════ -->
+        <com.greeniq.app.ui.iot.AnimatedDataFlowView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- ════ LAYER 4: APPLICATION ════ -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GreenIQ.GlassCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="#3300FF88">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/GreenIQ.Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LAYER 4"
+                    android:textColor="#00FF88" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="APPLICATION LAYER — GREENIQ"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📱 Android App (Coaching/Manager)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔌 FastAPI Backend (M1-M8)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🧠 Gemini AI (HARIT Advisor)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📑 CCTS Report Auto-Gen"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"
+                        app:chipBackgroundColor="@color/bg_card_elevated"
+                        app:chipStrokeColor="#33FFFFFF"
+                        app:chipStrokeWidth="1dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#1A00FF88"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:text="End-to-end: sensor → carbon score → CCTS credit in &lt;10 seconds"
+                    android:textColor="#00FF88"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════ LATENCY CALLOUT ════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            app:cardBackgroundColor="#0D07D8F6"
+            app:cardCornerRadius="12dp"
+            app:strokeColor="#4D07D8F6"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ TOTAL LATENCY"
+                    android:textColor="#07D8F6"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sensor reading → Carbon score: &lt; 8 seconds end-to-end"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Competitors: manual entry → next day report"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

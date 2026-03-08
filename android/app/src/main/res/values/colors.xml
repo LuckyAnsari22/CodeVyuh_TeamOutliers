@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GreenIQ — ChainGPT-Inspired Color Palette -->
+<resources>
+    <!-- Primary Dark Backgrounds -->
+    <color name="bg_primary">#09090E</color>
+    <color name="bg_darker">#050508</color>
+    <color name="bg_surface">#0D0D14</color>
+    <color name="bg_card">#0F0F18</color>
+    <color name="bg_card_elevated">#14141F</color>
+
+    <!-- Accent Colors (ChainGPT Brand) -->
+    <color name="accent_pink">#E5417A</color>
+    <color name="accent_cyan">#07D8F6</color>
+    <color name="accent_green">#10B981</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#EFEFE5</color>
+    <color name="text_secondary">#A0A0A0</color>
+    <color name="text_muted">#6B6B6B</color>
+    <color name="text_accent">#07D8F6</color>
+
+    <!-- Glass Effects -->
+    <color name="glass_bg">#D9090914</color>
+    <color name="glass_border">#1AFFFFFF</color>
+    <color name="glass_border_hover">#33FFFFFF</color>
+
+    <!-- Glow Colors -->
+    <color name="glow_pink">#99E5417A</color>
+    <color name="glow_cyan">#9907D8F6</color>
+
+    <!-- Carbon Grades -->
+    <color name="carbon_excellent">#00FFFF</color>
+    <color name="carbon_good">#44FF88</color>
+    <color name="carbon_warning">#FFAA00</color>
+    <color name="carbon_critical">#FF4444</color>
+
+    <!-- Health States (3D Map) -->
+    <color name="health_green">#00FF88</color>
+    <color name="health_pulse">#00E5FF</color>
+    <color name="sick_red">#FF2D20</color>
+    <color name="sick_amber">#FF8C00</color>
+
+    <!-- Gradient Endpoints -->
+    <color name="gradient_start">#E5417A</color>
+    <color name="gradient_end">#07D8F6</color>
+
+    <!-- UI Borders -->
+    <color name="border_subtle">#1AFFFFFF</color>
+    <color name="border_active">#4D07D8F6</color>
+
+    <!-- System Override -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Material ColorScheme references -->
+    <color name="md_theme_dark_primary">#07D8F6</color>
+    <color name="md_theme_dark_onPrimary">#09090E</color>
+    <color name="md_theme_dark_primaryContainer">#0D2A30</color>
+    <color name="md_theme_dark_secondary">#E5417A</color>
+    <color name="md_theme_dark_onSecondary">#FFFFFF</color>
+    <color name="md_theme_dark_background">#09090E</color>
+    <color name="md_theme_dark_onBackground">#EFEFE5</color>
+    <color name="md_theme_dark_surface">#0D0D14</color>
+    <color name="md_theme_dark_onSurface">#EFEFE5</color>
+    <color name="md_theme_dark_surfaceVariant">#14141F</color>
+    <color name="md_theme_dark_error">#FF4444</color>
+    <color name="md_theme_dark_onError">#FFFFFF</color>
+    <color name="md_theme_dark_outline">#1AFFFFFF</color>
+
+    <!-- Splash -->
+    <color name="splash_bg">#050508</color>
+</resources>

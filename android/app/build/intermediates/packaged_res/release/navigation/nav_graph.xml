@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.greeniq.app.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <!-- Actions from Home to other destinations -->
+        <action
+            android:id="@+id/action_home_to_solutions"
+            app:destination="@id/solutionsFragment" />
+        <action
+            android:id="@+id/action_home_to_advisor"
+            app:destination="@id/advisorFragment" />
+        <action
+            android:id="@+id/action_home_to_map"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_home_to_carbon"
+            app:destination="@id/digitalTwinFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.greeniq.app.ui.map.MapFragment"
+        android:label="3D Map"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/anomalyFragment"
+        android:name="com.greeniq.app.ui.anomaly.AnomalyFragment"
+        android:label="Anomalies" />
+
+    <fragment
+        android:id="@+id/digitalTwinFragment"
+        android:name="com.greeniq.app.ui.twin.DigitalTwinFragment"
+        android:label="Digital Twin" />
+
+    <fragment
+        android:id="@+id/advisorFragment"
+        android:name="com.greeniq.app.ui.advisor.AdvisorFragment"
+        android:label="AI Advisor"
+        tools:layout="@layout/fragment_advisor" />
+
+    <fragment
+        android:id="@+id/iotArchitectureFragment"
+        android:name="com.greeniq.app.ui.iot.IotArchitectureFragment"
+        android:label="IoT Architecture"
+        tools:layout="@layout/fragment_iot_architecture" />
+
+    <fragment
+        android:id="@+id/codeFragment"
+        android:name="com.greeniq.app.ui.code.CodeFragment"
+        android:label="Code" />
+
+    <fragment
+        android:id="@+id/solutionsFragment"
+        android:name="com.greeniq.app.ui.solutions.SolutionsFragment"
+        android:label="Solutions"
+        tools:layout="@layout/fragment_solutions" />
+</navigation>

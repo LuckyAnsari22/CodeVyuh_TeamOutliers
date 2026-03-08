@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "com.greeniq.app-merged_res-71:/anim_scale_in.xml.flat",
+        "source": "com.greeniq.app-main-73:/anim/scale_in.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/drawable_gradient_fade_bottom.xml.flat",
+        "source": "com.greeniq.app-main-73:/drawable/gradient_fade_bottom.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/drawable_ic_splash_logo.xml.flat",
+        "source": "com.greeniq.app-main-73:/drawable/ic_splash_logo.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_fragment_map.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/fragment_map.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_activity_main.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_fragment_iot_architecture.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/fragment_iot_architecture.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_item_stat_card.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/item_stat_card.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_fragment_solutions.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/fragment_solutions.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/anim_fade_up.xml.flat",
+        "source": "com.greeniq.app-main-73:/anim/fade_up.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/drawable_bg_state_btn.xml.flat",
+        "source": "com.greeniq.app-main-73:/drawable/bg_state_btn.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "com.greeniq.app-main-73:/mipmap-hdpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_item_chat_message.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/item_chat_message.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.greeniq.app-main-73:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/drawable_bg_button_gradient.xml.flat",
+        "source": "com.greeniq.app-main-73:/drawable/bg_button_gradient.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/navigation_nav_graph.xml.flat",
+        "source": "com.greeniq.app-main-73:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "com.greeniq.app-main-73:/mipmap-hdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/drawable_bg_tag_chip.xml.flat",
+        "source": "com.greeniq.app-main-73:/drawable/bg_tag_chip.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/drawable_bg_glass_card.xml.flat",
+        "source": "com.greeniq.app-main-73:/drawable/bg_glass_card.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_fragment_home.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_item_solution_card.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/item_solution_card.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/drawable_gradient_fade_top.xml.flat",
+        "source": "com.greeniq.app-main-73:/drawable/gradient_fade_top.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/drawable_bg_input_field.xml.flat",
+        "source": "com.greeniq.app-main-73:/drawable/bg_input_field.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_fragment_advisor.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/fragment_advisor.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/layout_fragment_carbon.xml.flat",
+        "source": "com.greeniq.app-main-73:/layout/fragment_carbon.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/drawable_bg_live_dot.xml.flat",
+        "source": "com.greeniq.app-main-73:/drawable/bg_live_dot.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/xml_network_security_config.xml.flat",
+        "source": "com.greeniq.app-main-73:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "com.greeniq.app-merged_res-71:/color_bottom_nav_colors.xml.flat",
+        "source": "com.greeniq.app-main-73:/color/bottom_nav_colors.xml"
+    }
+]
